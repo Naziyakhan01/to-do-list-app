@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="bg-video.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="overlay">
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Enter a new task" />
+        <input type="date" id="dueDate" />
+      </div>
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="clearTasks()">Clear All</button>
+
+      <div class="filters">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+        <button onclick="filterTasks('incomplete')">Incomplete</button>
+      </div>
+
+      <p id="counter">0 tasks</p>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
